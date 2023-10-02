@@ -5,38 +5,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.3/dist/tailwind.min.css" rel="stylesheet">
+  <link href="app.css" rel="stylesheet">
   <title>Account form</title>
 </head>
 <body class="bg-gray-100">
   <div class="min-h-screen flex items-center justify-center">
     <div class="w-full max-w-md p-8 space-y-6 bg-white rounded-xl shadow-md">
+      <div class="alert">Action successful!</div>
       <form id="signupForm" class="space-y-4">
         <div>
           <label for="signupEmail" class="block text-sm font-medium">Email</label>
-          <input type="email" id="signupEmail" class="block w-full mt-1 p-2 border-gray-300 rounded-md bg-gray-200">
+          <input type="email" id="signupEmail" placeholder="Enter a valid email address" class="block w-full mt-1 p-2 border-gray-300 rounded-md bg-gray-200" required>
+          <p id="error-email" style="color: red;"></p>
         </div>
         <div>
           <label for="signupPassword" class="block text-sm font-medium">Password</label>
-          <input type="password" id="signupPassword" class="block w-full mt-1 p-2 border-gray-300 rounded-md bg-gray-200">
+          <input type="password" id="signupPassword" placeholder="Enter your desired password here" class="block w-full mt-1 p-2 border-gray-300 rounded-md bg-gray-200" required>
         </div>
         <div>
           <label for="signupConfirmPassword" class="block text-sm font-medium">Confirm Password</label>
-          <input type="password" id="signupConfirmPassword" class="block w-full mt-1 p-2 border-gray-300 rounded-md bg-gray-200">
+          <input type="password" id="signupConfirmPassword" placeholder="Confirm the password you entered" class="block w-full mt-1 p-2 border-gray-300 rounded-md bg-gray-200" required>
         </div>
         <div>
           <label for="signupPhoneNumber" class="block text-sm font-medium">Phone Number</label>
-          <input type="tel" id="signupPhoneNumber" class="block w-full mt-1 p-2 border-gray-300 rounded-md bg-gray-200">
+          <input type="tel" pattern="[0-9]{11}" maxlength="11" id="signupPhoneNumber" placeholder="Enter 11 digits phone number" class="block w-full mt-1 p-2 border-gray-300 rounded-md bg-gray-200" required>
+          <p id="error-phone" style="color: red;"></p>
         </div>
+
         <button type="submit" class="w-full py-2 px-4 bg-blue-500 text-white font-semibold rounded-md">Signup</button>
       </form>
       <form id="loginForm" class="space-y-4 hidden">
         <div>
           <label for="loginEmail" class="block text-sm font-medium">Email</label>
-          <input type="email" id="loginEmail" class="block w-full mt-1 p-2 border-gray-300 rounded-md bg-gray-200">
+          <input type="email" id="loginEmail" class="block w-full mt-1 p-2 border-gray-300 rounded-md bg-gray-200" required>
         </div>
         <div>
           <label for="loginPassword" class="block text-sm font-medium">Password</label>
-          <input type="password" id="loginPassword" class="block w-full mt-1 p-2 border-gray-300 rounded-md bg-gray-200">
+          <input type="password" id="loginPassword" class="block w-full mt-1 p-2 border-gray-300 rounded-md bg-gray-200" required>
         </div>
         <button type="submit" class="w-full py-2 px-4 bg-blue-500 text-white font-semibold rounded-md">Login</button>
       </form>

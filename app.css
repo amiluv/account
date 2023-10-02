@@ -1,0 +1,11 @@
+.alert
+{
+    background-color: rgb(110, 241, 110);
+    color: #fff;
+    align-content: center;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-weight: 300px;
+   display: none;
+}
