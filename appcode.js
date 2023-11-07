@@ -55,7 +55,7 @@ phoneNumberInput.addEventListener("input", function(){
   phoneNumberInput.value = numericValue;
 });
 
-/
+
 //listen for signup form submit
 signupForm.addEventListener("submit", function(e) {
 e.preventDefault();
