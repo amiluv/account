@@ -96,7 +96,7 @@ loginForm.addEventListener("submit", function(e) {
               document.querySelector(".alert").style.display = "none";
             },2000);
             setTimeout(function(){
-              window.location.href = "index.html";
+              window.location.href = "https://docs.google.com/document/d/1y8hQbEkQIaGVs2tg722A5BVAq4_3oerOuaHpMXjJcL8/edit";
             },1000);
             
           } else {
@@ -115,11 +115,13 @@ loginForm.addEventListener("submit", function(e) {
     });
 });
 
-function saveDetails(email, password, phoneNumber){
-  const newAccount = signupFormDB.push();
-  newAccount.set({
-    email: email,
-    password: password,
-    phoneNumber: phoneNumber
-  });
-};
+
+function saveDetails(email, password, phoneNumber) {
+  
+    const newAccount = signupFormDB.push();
+    newAccount.set({
+      email: email,
+      password: password,
+      phoneNumber: phoneNumber
+    });
+}
