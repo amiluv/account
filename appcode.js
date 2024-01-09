@@ -11,7 +11,7 @@ const firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
-//referencing the database...
+//referencing the database
 const database = firebase.database();
 //const signupFormDB = firebase.database().ref("signupForm");
 const signupFormDB = database.ref("users");
@@ -115,11 +115,13 @@ loginForm.addEventListener("submit", function(e) {
     });
 });
 
-function saveDetails(email, password, phoneNumber){
-  const newAccount = signupFormDB.push();
-  newAccount.set({
-    email: email,
-    password: password,
-    phoneNumber: phoneNumber
-  });
-};
+
+function saveDetails(email, password, phoneNumber) {
+  
+    const newAccount = signupFormDB.push();
+    newAccount.set({
+      email: email,
+      password: password,
+      phoneNumber: phoneNumber
+    });
+}
