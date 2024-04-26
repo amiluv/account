@@ -1,2 +1,2 @@
-# amiluv.github.io
+# My ALX final projects
 My github hosted project website containing my app project for the final award of the certificate in software engineering.
